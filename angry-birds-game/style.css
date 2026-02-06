@@ -1,0 +1,108 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  background: #f5f6fb;
+  color: #1f1f2e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+header p {
+  margin: 0;
+  color: #4a4a64;
+}
+
+.game-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(240px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+canvas {
+  width: 100%;
+  border-radius: 18px;
+  border: 2px solid #e2e4f5;
+  box-shadow: 0 18px 40px rgba(42, 50, 91, 0.15);
+  background: linear-gradient(180deg, #b4d9ff 0%, #f5f7ff 45%, #f1e1b0 45%, #f1e1b0 100%);
+}
+
+.hud {
+  display: grid;
+  gap: 16px;
+}
+
+.hud-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 12px 24px rgba(42, 50, 91, 0.08);
+}
+
+.hud-card h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.hud-card ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+  color: #43445a;
+}
+
+.hud-card p {
+  margin: 8px 0;
+  color: #31324a;
+}
+
+button#reset {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  background: #ff5a5f;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button#reset:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(255, 90, 95, 0.25);
+}
+
+button#reset:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+@media (max-width: 960px) {
+  .game-panel {
+    grid-template-columns: 1fr;
+  }
+}
