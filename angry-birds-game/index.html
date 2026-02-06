@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>愤怒的小鸟 - 迷你网页版</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>愤怒的小鸟 · 迷你网页版</h1>
+        <p>拖拽小鸟，调整角度与力度，松手发射！</p>
+      </header>
+
+      <section class="game-panel">
+        <canvas id="game" width="960" height="540" aria-label="Angry Birds mini game"></canvas>
+        <aside class="hud">
+          <div class="hud-card">
+            <h2>操作说明</h2>
+            <ul>
+              <li>拖拽小鸟进行蓄力。</li>
+              <li>松手发射，命中猪猪。</li>
+              <li>点击“重置”重新开始。</li>
+            </ul>
+          </div>
+          <div class="hud-card">
+            <h2>状态</h2>
+            <p><strong>剩余小鸟：</strong><span id="birds-left">3</span></p>
+            <p><strong>剩余猪猪：</strong><span id="pigs-left">3</span></p>
+            <p><strong>提示：</strong><span id="hint">拖拽小鸟开始</span></p>
+            <button id="reset">重置</button>
+          </div>
+        </aside>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
